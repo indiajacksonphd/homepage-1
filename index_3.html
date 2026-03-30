@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>India Jackson</title>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip-utils@0.1.0/dist/jszip-utils.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="json-formatter.js"></script>
+  
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+    <link href="fitsFlow_original.css" rel="stylesheet">
+    <link href="json-formatter.css" rel="stylesheet">
+  </head>
+  
+  <body class="stars">
+      <div id="app-container">
+          <!-- Top 75% -->
+          <div id="main-content">
+            <div id="polling-overlay"></div>
+              <!--****************** NAVIGATION BAR ******************/-->
+            
+              <div id="navbar">
+
+                <div class="nav-side nav-left">
+                  <div id="email-trigger-container">
+                    <img src="images/envelope.png" id="email-trigger" class="pulse-glow-box" alt="Contact Us">
+                  </div>
+              
+                  <a href="https://www.linkedin.com/in/india-jackson-phd-641a9354/" target="_blank">
+                    <img src="images/LI-In-Bug.png" alt="LinkedIn" class="pulse-glow nav-icon">
+                  </a>
+                </div>
+              
+                <div id="nav-center">
+                  <div id="nav-title">India Jackson, Ph.D.</div>
+                </div>
+              
+                <div class="nav-side nav-right">
+                  <a href="https://orcid.org/0009-0001-5404-8689" target="_blank">
+                    <img src="images/ORCID_iD.png" alt="ORCID" class="pulse-glow nav-icon">
+                  </a>
+                  <a href="https://github.com/indiajacksonphd" target="_blank">
+                    <img src="images/github.png" alt="GitHub" class="pulse-glow nav-icon">
+                  </a>
+                </div>
+
+                      <!-- Email Overlay -->
+                            <div id="email-overlay" class="email-overlay-hidden">
+                              <div id="email-box">
+                                <h3>Send Message</h3>
+
+                                <form id="email-form" novalidate>
+                                  <input
+                                    type="text"
+                                    id="email-first-name"
+                                    name="first_name"
+                                    placeholder="First Name *"
+                                    maxlength="40"
+                                    autocomplete="given-name"
+                                    required
+                                  >
+
+                                  <input
+                                    type="text"
+                                    id="email-last-name"
+                                    name="last_name"
+                                    placeholder="Last Name *"
+                                    maxlength="40"
+                                    autocomplete="family-name"
+                                    required
+                                  >
+
+                                  <input
+                                    type="email"
+                                    id="email-address"
+                                    name="email"
+                                    placeholder="Email Address *"
+                                    maxlength="120"
+                                    autocomplete="email"
+                                    required
+                                  >
+
+                                  <input
+                                    type="text"
+                                    id="email-subject"
+                                    name="subject"
+                                    placeholder="Subject *"
+                                    maxlength="120"
+                                    required
+                                  >
+
+                                  <textarea
+                                    id="email-message"
+                                    name="message"
+                                    placeholder="Message *"
+                                    rows="5"
+                                    minlength="20"
+                                    maxlength="1000"
+                                    required
+                                  ></textarea>
+
+                                  <div class="human-check">
+                                    <label for="email-human-answer" id="human-question">I am a human: 3 + 4 = ?</label>
+                                    <input
+                                      type="text"
+                                      id="email-human-answer"
+                                      name="human_answer"
+                                      placeholder="Enter answer *"
+                                      inputmode="numeric"
+                                      maxlength="3"
+                                      required
+                                    >
+                                  </div>
+
+                                  <input type="hidden" id="email-user-ip" name="user_ip">
+
+                                  <div id="email-error" class="email-error" aria-live="polite"></div>
+
+                                  <div class="email-buttons">
+                                    <button type="button" id="email-cancel">Cancel</button>
+                                    <button type="submit">Submit</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                   
+              </div>
+ 
+
+      <!--****************** MAIN SECTION ******************/-->
+                  <div id="main-panels">
+                      <div id="panel-wrapper">
+                          <!-- LEFT PANEL -->
+                          <div class="column">
+
+                              <div class="panel-label">
+                                <div class="tab-btn-about-container">
+                                  <button id="aboutBtn" class="tab-btn-about active" onclick="switchAboutTab('bio')">About</button>
+                                  <button id="outreachBtn" class="tab-btn-about" onclick="switchAboutTab('outreach')">Outreach</button>
+                                  <button id="mediaBtn" class="tab-btn-about" onclick="switchAboutTab('media')">Media</button>
+                                  <button id="shopBtn" class="tab-btn-about" onclick="switchAboutTab('shop')">Shop</button>
+                                </div>
+                              </div>
+
+                              <div class="panel" >
+                                <div class="tab-content" id="bio-tab" >
+                                  <div class="container">         
+                                    <img src="images/black_square.png" id="panelBackgroundImage">
+                                    <div class="backgroundOverlay" id="aboutOverlay">
+                                      <iframe src="bio.html" width="100%" height="100%" style="border: none;"></iframe>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <div class="tab-content" id="outreach-tab" style="display:none">
+                                  <div class="container">         
+                                    <img src="images/black_square.png" id="panelBackgroundImage">
+                                    <div class="backgroundOverlay" id="aboutOverlay">
+                                      <iframe src="outreach.html" width="100%" height="100%" style="border: none;"></iframe>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <div class="tab-content" id="media-tab" style="display:none">
+                                  <div class="container">         
+                                    <img src="images/black_square.png" id="panelBackgroundImage">
+                                    <div class="backgroundOverlay" id="aboutOverlay">
+                                      <iframe src="media.html" width="100%" height="100%" style="border: none;"></iframe>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <div class="tab-content" id="shop-tab" style="display:none">
+                                  <div class="container">         
+                                    <img src="images/black_square.png" id="panelBackgroundImage">
+                                    <div class="backgroundOverlay" id="aboutOverlay">
+                                      <iframe src="shop.html" width="100%" height="100%" style="border: none;"></iframe>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                          
+                          
+                          
+                          </div>
+                 
+                          <!-- RIGHT PANEL -->
+                          <div class="column">
+
+                              <div class="panel-label">
+                                  <div class="tab-btn-works-container">
+                                      <button id="cvBtn" class="tab-btn-works active" onclick="switchWorksTab('cv', this)">CV</button>
+                                      <button id="sciBtn" class="tab-btn-works" onclick="switchWorksTab('science', this)">Science</button>
+                                      <button id="softwareBtn" class="tab-btn-works" onclick="switchWorksTab('software', this)">Software</button>
+                                      <button id="policyBtn" class="tab-btn-works" onclick="switchWorksTab('policy', this)">Policy</button>
+                                  </div>
+                              </div>
+
+                              <div class="panel">
+
+                                    <div class="tab-content" id="cv-tab">
+                                      <div class="container">
+                                          <img src="images/black_square.png" id="panelBackgroundImage">
+                                          <div class="backgroundOverlay" id="worksOverlay">
+                                            <iframe src="https://indiajacksonphd.s3.us-east-1.amazonaws.com/Jackson_India_CV_2026_8.pdf" width="100%" height="100%" style="border: none;"></iframe>
+                                          </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="tab-content" id="science-tab" style="display:none">
+                                      <div class="container">
+                                          <img src="images/black_square.png" id="panelBackgroundImage">
+                                          <div class="backgroundOverlay" id="worksOverlay">
+                                            <iframe src="science.html" width="100%" height="100%" style="border: none;"></iframe>
+                                          </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="tab-content" id="software-tab" style="display:none">
+                                      <div class="container">
+                                          <img src="images/black_square.png" id="panelBackgroundImage">
+                                          <div class="backgroundOverlay" id="worksOverlay">
+                                            <iframe src="software.html" width="100%" height="100%" style="border: none;"></iframe>
+                                          </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="tab-content" id="policy-tab" style="display:none">
+                                      <div class="container">
+                                          <img src="images/black_square.png" id="panelBackgroundImage">
+                                          <div class="backgroundOverlay" id="worksOverlay">
+                                            <iframe src="policy.html" width="100%" height="100%" style="border: none;"></iframe>
+                                          </div>
+                                      </div>
+                                    </div>
+
+
+
+
+                              </div>
+                          </div>
+
+
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    <div id="mobile-blocker">
+        <div class="mobile-content">
+          <img src="images/sad_sun.png" alt="Sad Sun" class="sad-sun" />
+          <h2>⚠️ Mobile View Not Supported...Yet</h2>
+          <p>Please use a larger screen.</p>
+        </div>
+      </div>
+
+    
+
+      <script type="text/javascript" src="ShootingStarClass.js"></script>
+      <script type="text/javascript">
+        $( document ).ready( function(){
+          var shootingStarObj = new ShootingStar( "body" );
+              shootingStarObj.launch();
+        });
+      </script>
+      
+      
+  </body>
+<script src="homepage_1.js" defer></script>
+
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media | Dr. India Jackson</title>
+    <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      line-height: 1.5;
+      font-family: sans-serif;
+    }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+
+    .section {
+      margin-bottom: 44px;
+    }
+
+    .section h2 {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      padding-bottom: 10px;
+      /*font-family: "Bungee Hairline", sans-serif;*/
+    }
+
+    .media-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .media-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .media-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .media-icon {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: #111;
+      margin-top: 2px;
+    }
+
+    .media-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .media-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .media-title {
+      font-weight: 700;
+      font-size: 1rem;
+      /*font-family: "Bungee Hairline", sans-serif;*/
+    }
+
+    .media-description {
+      color: rgba(255,255,255,0.82);
+      font-size: 0.96rem;
+    }
+
+    .media-link {
+      display: inline-block;
+      margin-top: 6px;
+      color: #8fd3ff;
+      text-decoration: none;
+      word-break: break-word;
+      font-size: 0.92rem;
+    }
+
+    .media-link:hover {
+      text-decoration: underline;
+    }
+
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 18px;
+    }
+
+    .press-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .press-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .press-item a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .press-item a:hover {
+      color: #8fd3ff;
+    }
+    /*
+
+    @media (max-width: 850px) {
+      .press-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page-wrap {
+        padding: 28px 16px 48px;
+      }
+
+      .media-item,
+      .press-item {
+        padding: 12px 12px;
+      }
+    }
+    */
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+
+
+    <section class="section">
+      <h2>Commentary & Interviews</h2>
+      <div class="media-list">
+
+        <div class="media-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=alieward.com&sz=64" alt="Ologies Podcast icon">
+          <div class="media-content">
+            <div class="media-title-row">
+              <span class="media-title">Ologies Podcast</span>
+            </div>
+            <div class="media-description">Discussed heliophysics for a broad audience.</div>
+            <a class="media-link" href="https://www.alieward.com/smologies/thesunweather-76gwx?rq=India%20Jackson" target="_blank" rel="noopener noreferrer">
+              Listen
+            </a>
+          </div>
+        </div>
+
+        <div class="media-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=npr.org&sz=64" alt="NPR icon">
+          <div class="media-content">
+            <div class="media-title-row">
+              <span class="media-title">National Public Radio</span>
+            </div>
+            <div class="media-description">Interview on impacts of the federal funding freeze.</div>
+            <a class="media-link" href="https://www.npr.org/2025/02/01/nx-s1-5282182/how-a-funding-freeze-ordered-by-trump-is-impacting-2-early-career-scientists" target="_blank" rel="noopener noreferrer">
+              Listen
+            </a>
+          </div>
+        </div>
+
+        <div class="media-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=npr.org&sz=64" alt="NPR icon">
+          <div class="media-content">
+            <div class="media-title-row">
+              <span class="media-title">National Public Radio</span>
+            </div>
+            <div class="media-description">Provided expert analysis on solar activity.</div>
+            <a class="media-link" href="https://www.npr.org/2024/05/11/1250756722/a-powerful-solar-storm-is-bringing-northern-lights-to-unusual-places" target="_blank" rel="noopener noreferrer">
+              Listen
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Features & Profiles</h2>
+      <div class="media-list">
+
+        <div class="media-item">
+          <img class="media-icon" src="images/ajc_icon.png" alt="PDF icon">
+          <div class="media-content">
+            <div class="media-title-row">
+              <span class="media-title">Atlanta Journal-Constitution</span>
+            </div>
+            <div class="media-description">Article detailing my trip to NASA JPL.</div>
+            <a class="media-link" href="https://indiajacksonphd.s3.us-east-1.amazonaws.com/The_Atlanta_Constitution_2024_05_26_B4.pdf" target="_blank" rel="noopener noreferrer">
+              View
+            </a>
+          </div>
+        </div>
+
+        <div class="media-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=gpb.org&sz=64" alt="GPB icon"><br>
+          <div class="media-content">
+            <div class="media-title-row">
+              <span class="media-title">Georgia Public Broadcasting</span> 
+            </div>
+            <div class="media-description">Interview detailing crowdfunding for NASA internship.</div>
+            <a class="media-link" href="https://www.gpb.org/news/2019/09/23/gsu-student-single-mom-reflects-on-life-changing-experience-at-nasa-internship" target="_blank" rel="noopener noreferrer">
+              Listen
+            </a>
+          </div>
+        </div>
+
+        <div class="media-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=news.gsu.edu&sz=64" alt="GSU icon">
+          <div class="media-content">
+            <div class="media-title-row">
+              <span class="media-title">GSU Magazine</span>
+            </div>
+            <div class="media-description">Cover feature and spread detailing my academic journey.</div>
+            <a class="media-link" href="https://news.gsu.edu/magazine/fall2019/stars-align/" target="_blank" rel="noopener noreferrer">
+              View
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Press Coverage</h2>
+      <div class="press-grid">
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=gpbnews.org&sz=64" alt="GPB icon">
+          <a href="https://www.gpbnews.org/post/atlanta-single-mom-will-intern-nasa-help-strangers" target="_blank" rel="noopener noreferrer">Georgia Public Broadcasting (GPB)</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=nytimes.com&sz=64" alt="New York Times icon">
+          <a href="https://www.nytimes.com/2019/05/15/us/nasa-internship-single-mom-gofundme.html" target="_blank" rel="noopener noreferrer">New York Times</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=bbc.com&sz=64" alt="BBC icon">
+          <a href="https://www.bbc.com/news/world-us-canada-48290154" target="_blank" rel="noopener noreferrer">British Broadcasting Corporation (BBC)</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=startupitalia.eu&sz=64" alt="StartUp Italia icon">
+          <a href="https://startupitalia.eu/109227-20190520-india-jackson-la-ragazza-grazie-al-crowdfunding-andra-alla-nasa-studiare-pianeti" target="_blank" rel="noopener noreferrer">La Repubblica: StartUp Italia</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=atlantablackstar.com&sz=64" alt="Atlanta Black Star icon">
+          <a href="https://atlantablackstar.com/2019/05/14/strangers-chip-in-8k-to-help-georgia-single-mom-ph-d-candidate-attend-prestigious-nasa-internship/" target="_blank" rel="noopener noreferrer">Atlanta Black Star</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=ebony.com&sz=64" alt="Ebony icon">
+          <a href="https://www.ebony.com/news/georgia-mom-to-attend-nasa-internship-with-help-from-crowd-fundraiser/" target="_blank" rel="noopener noreferrer">Ebony</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=vibe.com&sz=64" alt="Vibe icon">
+          <a href="https://www.vibe.com/2019/05/single-mom-nasa-internship-go-fund-me" target="_blank" rel="noopener noreferrer">Vibe</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" alt="YouTube icon">
+          <a href="https://www.youtube.com/watch?v=4e6AI6onmUk" target="_blank" rel="noopener noreferrer">Hoodrich Radio</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=theroot.com&sz=64" alt="The Root icon">
+          <a href="https://theglowup.theroot.com/to-the-stars-and-beyond-a-single-mom-gets-to-intern-at-1834753027" target="_blank" rel="noopener noreferrer">The Root</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=univision.com&sz=64" alt="Univision icon">
+          <a href="https://www.univision.com/univision-news/strangers-help-single-mother-to-take-a-nasa-internship-video" target="_blank" rel="noopener noreferrer">Univision</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=blavity.com&sz=64" alt="Blavity icon">
+          <a href="https://blavity.com/generous-donors-raised-thousands-for-this-single-mom-and-phd-student-to-do-a-nasa-internship?category1=news" target="_blank" rel="noopener noreferrer">Blavity</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=cnn.com&sz=64" alt="CNN icon">
+          <a href="https://www.cnn.com/2019/05/14/us/nasa-internship-gofundme-trnd/index.html" target="_blank" rel="noopener noreferrer">CNN</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=newsone.com&sz=64" alt="NewsOne icon">
+          <a href="https://newsone.com/3852890/india-jackson-go-fund-me-nasa-internship/" target="_blank" rel="noopener noreferrer">NewsOne</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=thegrio.com&sz=64" alt="The Grio icon">
+          <a href="https://thegrio.com/2019/05/20/india-jackson-nasa-internship-gofundme/" target="_blank" rel="noopener noreferrer">The Grio</a>
+        </div>
+
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=gofundme.com&sz=64" alt="GoFundMe icon">
+          <a href="https://www.gofundme.com/f/single-mother-amp-phd-student-wins-nasa-internship" target="_blank" rel="noopener noreferrer">My GoFundMe Campaign</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=wsbtv.com&sz=64" alt="WSBTV icon">
+          <a href="https://www.wsbtv.com/news/local/single-mom-scores-nasa-internship-strangers-raise-8k-to-help-her-go/948895430" target="_blank" rel="noopener noreferrer">Atlanta Channel 2 News (WSBTV)</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="images/ajc_icon.png" alt="AJC icon">
+          <a href="https://www.ajc.com/news/local/this-single-mother-scored-nasa-internship-strangers-raised-help-her-attend/qNHzujpaqvHpCqeur3SrvJ/" target="_blank" rel="noopener noreferrer">Atlanta Journal-Constitution (AJC)</a>
+        </div>
+
+        <div class="press-item">
+          <img class="media-icon" src="https://www.google.com/s2/favicons?domain=essence.com&sz=64" alt="Essence icon">
+          <a href="https://www.essence.com/news/india-jackson-nasa-internship-go-fund-me/" target="_blank" rel="noopener noreferrer">Essence</a>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</body>
+</html>

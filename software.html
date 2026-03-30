@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software | Dr. India Jackson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+    }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 24px 60px;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 1.2rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin: 0 0 30px 0;
+      /*font-family: "Bungee Hairline", sans-serif;*/
+    }
+
+    .software-intro {
+      max-width: 940px;
+      margin: 0 auto 28px auto;
+      padding: 24px 26px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      box-shadow: 0 0 25px rgba(255, 170, 50, 0.08);
+
+      /*font-family: "Inter", sans-serif;*/
+      /*font-family: "Space Grotesk", sans-serif;
+      font-family: "IBM Plex Sans", sans-serif;*/
+    }
+
+    .software-intro p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      letter-spacing: 2px;
+      text-align: justify;
+    }
+
+    .software-stack {
+      max-width: 940px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .software-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 22px 22px 20px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      box-shadow: 0 0 25px rgba(255, 170, 50, 0.06);
+    }
+
+    .software-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .software-card h3 {
+      margin: 0 0 10px 0;
+      font-size: 0.95rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      /*font-family: "Bungee Hairline", sans-serif;*/
+    }
+
+    .software-meta {
+      margin: 0 0 12px 0;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+
+    .software-card p {
+      margin: 0 0 14px 0;
+      font-size: 0.78rem;
+      line-height: 1.7;
+      letter-spacing: 1.8px;
+      /*text-transform: uppercase;*/
+      /*font-family: "Space Grotesk", sans-serif;
+      font-family: "IBM Plex Sans", sans-serif;*/
+    }
+
+    .software-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .software-links a {
+      color: #8fd3ff;
+      text-decoration: none;
+      font-size: 0.74rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 1px solid rgba(143, 211, 255, 0.3);
+      border-radius: 10px;
+      padding: 8px 12px;
+    }
+
+    .software-links a:hover {
+      background: rgba(143, 211, 255, 0.08);
+    }
+
+    .in-progress {
+      max-width: 940px;
+      margin: 26px auto 0 auto;
+      padding: 24px 26px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      box-shadow: 0 0 25px rgba(255, 170, 50, 0.08);
+    }
+
+    .in-progress h2 {
+      margin: 0 0 16px 0;
+      text-align: center;
+      font-size: 1rem;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      /*font-family: "Bungee Hairline", sans-serif;*/
+    }
+
+    .in-progress p {
+      margin: 0;
+      font-size: 0.78rem;
+      line-height: 1.8;
+      letter-spacing: 1.8px;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <h1 class="page-title">Software</h1>
+
+    <section class="software-intro">
+      <p>
+        I build scientific software that makes heliophysics data more accessible, interoperable, and ready for discovery.
+        My software work is driven by a simple idea: scientific data should not only be available, but usable. These projects
+        bring together cloud infrastructure, machine learning workflows, browser-based tools, and scientific data systems to
+        reduce barriers between raw data and meaningful analysis.
+      </p>
+    </section>
+
+    <section class="software-stack">
+
+      <div class="software-card">
+        <h3>FitsFlow</h3>
+        <p>
+          FitsFlow is a browser-based tool designed to make solar FITS data easier to inspect, organize, and prepare for machine
+          learning workflows. It reflects my broader goal of lowering technical barriers for researchers, students, and future
+          scientific software users working with complex imaging data.
+        </p>
+        <div class="software-links">
+          <a href="https://www.fitsflow.org" target="_blank">Open Platform</a>
+          <a href="https://doi.org/10.5281/zenodo.17069414" target="_blank" rel="noopener noreferrer">Software DOI</a>
+          <a href="https://github.com/indiajacksonphd/FitsFlow" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="software-card">
+        <h3>Helio-Lite</h3>
+        <p>
+          Helio-Lite is an open cloud framework for advancing heliophysics research through flexible, scalable infrastructure.
+          The project emphasizes accessibility, reproducibility, and the idea that scientific environments should be as thoughtfully
+          designed as the science they support.
+        </p>
+        <div class="software-links">
+          <a href="https://doi.org/10.5334/jors.519" target="_blank" rel="noopener noreferrer">Paper</a>
+          <a href="https://doi.org/10.5281/zenodo.17611741" target="_blank" rel="noopener noreferrer">Software DOI</a>
+          <a href="https://github.com/indiajacksonphd/Helio-Lite" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="software-card">
+        <h3>SSEP Dataset</h3>
+        <p>
+          The Survival Solar Energetic Particle Dataset supports time-to-event analysis of SEP detection and provides a structured
+          data foundation for forecasting studies. I see research datasets as software-adjacent infrastructure: they shape what
+          kinds of questions can be asked, tested, and reproduced.
+        </p>
+        <div class="software-links">
+          <a href="https://doi.org/10.7910/DVN/GXY9MZ" target="_blank" rel="noopener noreferrer">Dataset DOI</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="in-progress">
+      <h2>Upcoming Projects</h2>
+      <p>
+        My software vision extends beyond individual tools. I am interested in building interoperable systems for heliophysics data,
+        including machine-learning-ready file workflows, scalable cloud pipelines, and software that connects raw scientific formats
+        to downstream research use. This includes ongoing work around browser-based scientific tooling, format conversion, and
+        infrastructure for accessible space weather analysis.
+      </p>
+    </section>
+  </div>
+</body>
+</html>

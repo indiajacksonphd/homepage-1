@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Science | Dr. India Jackson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+    }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 24px 60px;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 1.2rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin: 0 0 30px 0;
+      /*font-family: "Bungee Hairline", sans-serif;*/
+    }
+
+    .science-intro {
+      max-width: 940px;
+      margin: 0 auto 28px auto;
+      padding: 24px 26px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      box-shadow: 0 0 25px rgba(255, 170, 50, 0.08);
+    }
+
+    .science-intro p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      letter-spacing: 2px;
+      text-align: justify;
+    }
+
+    .science-grid {
+      max-width: 940px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .science-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 22px 22px 20px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      box-shadow: 0 0 25px rgba(255, 170, 50, 0.06);
+    }
+
+    .science-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .science-card h3 {
+      margin: 0 0 12px 0;
+      font-size: 0.95rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      /*font-family: "Bungee Hairline", sans-serif;*/
+    }
+
+    .science-card p {
+      margin: 0 0 14px 0;
+      font-size: 0.78rem;
+      line-height: 1.7;
+      letter-spacing: 1.8px;
+    }
+
+    .science-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .science-links a {
+      color: #8fd3ff;
+      text-decoration: none;
+      font-size: 0.74rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 1px solid rgba(143, 211, 255, 0.3);
+      border-radius: 10px;
+      padding: 8px 12px;
+    }
+
+    .science-links a:hover {
+      background: rgba(143, 211, 255, 0.08);
+    }
+
+    .featured-research {
+      max-width: 940px;
+      margin: 26px auto 0 auto;
+      padding: 24px 26px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      box-shadow: 0 0 25px rgba(255, 170, 50, 0.08);
+    }
+
+    .featured-research h2 {
+      margin: 0 0 18px 0;
+      text-align: center;
+      font-size: 1rem;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+
+    .featured-item {
+      padding: 14px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .featured-item:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .featured-item h4 {
+      margin: 0 0 8px 0;
+      font-size: 0.84rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .featured-item p {
+      margin: 0 0 10px 0;
+      font-size: 0.76rem;
+      line-height: 1.7;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .featured-item a {
+      color: #8fd3ff;
+      text-decoration: none;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .featured-item a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 850px) {
+      .science-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-title {
+        font-size: 1rem;
+        letter-spacing: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <h1 class="page-title">Science</h1>
+
+    <section class="science-intro">
+        <p>
+            My research focuses on one central challenge in heliophysics: understanding how solar eruptive activity produces downstream particle and radiation environments that affect both technology and human spaceflight. I study the physical relationship between solar flares, coronal mass ejections, and solar energetic particle detection, with particular interest in timing, propagation, and forecastability across the heliosphere.
+          </p>
+          
+          <p>
+            This work sits at the intersection of solar physics, space weather, and applied statistical modeling. Across these areas, I use scientific inference, event-based analysis, and machine learning to investigate which solar and heliospheric conditions are most informative for anticipating hazardous radiation exposure.
+          </p>
+    </section>
+
+    <section class="science-grid">
+
+      <div class="science-card">
+        <h3>Solar Eruptive Events</h3>
+        <p>
+          I study solar flares, coronal mass ejections, and related activity as connected physical processes rather than isolated
+          observations. My goal is to better understand how these events begin, evolve, and shape downstream space weather conditions.
+        </p>
+        <div class="science-links">
+            <a href="https://doi.org/10.1038/s41550-025-02578-8" target="_blank" rel="noopener noreferrer">View Publication</a>
+        </div>
+      </div>
+
+      <div class="science-card">
+        <h3>SEP Propagation & Risk</h3>
+        <p>
+          A central focus of my work is understanding how solar energetic particles propagate from the Sun through interplanetary space
+          and how that transport translates into radiation environments that impact human spaceflight. I study when these particles are
+          detected, how long they take to arrive, and what physical conditions influence their timing, intensity, and potential hazard
+          to astronauts and space-based systems.
+        </p>
+        <div class="science-links">
+          <a href="https://doi.org/10.3847/1538-4365/ad3fba" target="_blank" rel="noopener noreferrer">
+            View Publication
+          </a>
+        </div>
+      </div>
+
+      <div class="science-card">
+        <h3>AI for Heliophysics</h3>
+        <p>
+          I apply computer vision, survival analysis, and machine learning to improve how solar events are detected, characterized,
+          and predicted. Rather than treating AI as separate from science, I use it as a scientific tool for extracting structure
+          from complex, heterogeneous space data.
+        </p>
+        <div class="science-links">
+            <a href="https://ui.adsabs.harvard.edu/abs/2024AGUFMSM11C..06J" target="_blank" rel="noopener noreferrer">View Abstract</a>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</body>
+</html>

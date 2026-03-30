@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | Dr. India Jackson</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+    }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 70px;
+    }
+
+    .page-title {
+      text-align: center;
+      /*font-family: "Bungee Hairline", sans-serif;*/
+      font-size: 1.15rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin: 0 0 30px 0;
+    }
+
+    .shop-grid {
+      max-width: 920px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    /*
+    .shop-link-card {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 18px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      box-shadow: 0 0 25px rgba(255, 170, 50, 0.06);
+    }
+
+    .shop-link-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .shop-thumb {
+      width: 120px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+      background: #111;
+    }
+*/
+.shop-link-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  padding: 22px;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.shop-link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.05);
+}
+
+.shop-thumb {
+  width: 200px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  flex-shrink: 0;
+
+  /* 🔥 subtle glow */
+  box-shadow: 0 0 18px rgba(255, 200, 80, 0.25);
+}
+    .shop-info {
+      min-width: 0;
+    }
+
+    .shop-info h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .shop-source {
+      margin: 0 0 10px 0;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .shop-description {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.88);
+    }
+
+    @media (max-width: 850px) {
+      .shop-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .shop-link-card {
+        align-items: flex-start;
+      }
+
+      .shop-thumb {
+        width: 100px;
+        height: 136px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <h1 class="page-title">Shop</h1>
+
+    <section class="shop-grid">
+
+      <a class="shop-link-card" href="https://a.co/d/08bruMuD" target="_blank" rel="noopener noreferrer">
+        <img class="shop-thumb" src="images/shop_1.png" alt="Our Solar System coloring book cover">
+        <div class="shop-info">
+          <h3>Our Solar System</h3>
+          <p class="shop-source">Amazon</p>
+          <p class="shop-description">
+            A coloring journey from the Sun to Neptune designed for astronomy outreach, curiosity, and early science engagement.
+          </p>
+        </div>
+      </a>
+
+    </section>
+  </div>
+</body>
+</html>

@@ -424,6 +424,7 @@
       border: 1px solid #555;
       padding: 4px 10px;
       font-size: 18px;
+      font-weight: bolder;
       font-family: "Bungee Hairline", sans-serif;
       border-radius: 4px;
       cursor: pointer;
@@ -454,6 +455,7 @@
   border: 1px solid #555;
   padding: 4px 10px;
   font-size: 18px;
+  font-weight: bolder;
   font-family: "Bungee Hairline", sans-serif;
   border-radius: 4px;
   cursor: pointer;

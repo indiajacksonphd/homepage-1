@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Highlight selected button
     const buttonMap = {
-      'about': document.querySelector(".tab-btn-about:nth-child(1)"),
+      'bio': document.querySelector(".tab-btn-about:nth-child(1)"),
       'outreach': document.querySelector(".tab-btn-about:nth-child(2)"),
       'media': document.querySelector(".tab-btn-about:nth-child(3)"),
       'shop': document.querySelector(".tab-btn-about:nth-child(4)")

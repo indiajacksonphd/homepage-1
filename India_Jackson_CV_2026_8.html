@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>India Jackson - Curriculum Vitae</title>
+  <style>
+    :root{
+      --accent:#00b0f0;
+      --link:#467886;
+      --visited:#96607d;
+      --text:#000;
+      --paper:#fff;
+      --line:#000;
+      --screen-bg:#f4f7fa;
+      --shadow:0 12px 32px rgba(0,0,0,.12);
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      background:var(--screen-bg);
+      color:var(--text);
+      font-family:"Times New Roman", Times, serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:var(--link); text-decoration:underline;}
+    a:visited{color:var(--visited);}
+
+    .screen-nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      display:flex;
+      gap:.45rem;
+      flex-wrap:wrap;
+      justify-content:center;
+      padding:.75rem;
+      background:rgba(255,255,255,.95);
+      border-bottom:1px solid rgba(0,0,0,.08);
+      backdrop-filter:blur(8px);
+    }
+
+    .screen-nav a{
+      text-decoration:none;
+      color:#1f2937;
+      border:1px solid rgba(0,0,0,.12);
+      background:#fff;
+      padding:.4rem .7rem;
+      border-radius:999px;
+      font-size:.86rem;
+      line-height:1;
+    }
+
+    .screen-nav a:hover{
+      border-color:var(--accent);
+      color:#000;
+    }
+
+    .page{
+      width:min(8.5in, calc(100vw - 2rem));
+      margin:1rem auto 2rem;
+      background:var(--paper);
+      box-shadow:var(--shadow);
+      padding:1in 1in .5in;
+    }
+
+    .cv-header{
+      text-align:center;
+      border-bottom:1px solid var(--line);
+      padding-bottom:.08in;
+      margin-bottom:0;
+    }
+
+    .cv-header .name{
+      font-size:20pt;
+      line-height:1.05;
+      margin:0;
+      padding:0;
+    }
+
+    .cv-header .title{
+      margin:.05in 0 0;
+      color:var(--accent);
+      font-size:12pt;
+      line-height:1.1;
+      padding-bottom:.08in;
+      border-bottom:1px solid var(--line);
+    }
+
+    .cv-header .contact{
+      margin:.08in 0 0;
+      font-size:10pt;
+      line-height:1.15;
+      word-break:break-word;
+    }
+
+    .section{
+      margin-top:.18in;
+    }
+
+    .section-title{
+      margin:0 0 .08in;
+      padding-bottom:.02in;
+      border-bottom:1px solid var(--line);
+      color:var(--accent);
+      font-size:14pt;
+      font-weight:700;
+      letter-spacing:.01em;
+      text-transform:uppercase;
+    }
+
+    .subsection-title{
+      /*margin:.04in 0 .06in;*/
+      margin:.04in 0 0in;
+      font-size:12pt;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+    }
+
+    p{
+      margin:.02in 0;
+      font-size:10pt;
+      line-height:1.15;
+    }
+
+    .funding-line strong{font-weight:700;}
+    .interest{
+      text-align:left;
+    }
+
+    table.cv-table{
+      width:100%;
+      border-collapse:collapse;
+      table-layout:fixed;
+      margin:0;
+    }
+
+    table.cv-table col.date{width:12%}
+    table.cv-table col.main{width:52%}
+    table.cv-table col.place{width:36%}
+
+    table.cv-table td{
+      vertical-align:top;
+      padding:0 0 .02in;
+      font-size:10pt;
+      line-height:1.15;
+    }
+
+    table.cv-table td.date{
+      text-align:center;
+      padding-right:.15in;
+      white-space:nowrap;
+    }
+
+    .tight td.date{
+      text-align:left !important;
+      padding-right:.08in;
+    }
+
+    .entry-head td{
+      font-weight:700;
+    }
+
+    .desc-row td{
+      font-style:italic;
+      padding-bottom:.10in;
+    }
+
+    .teaching td:nth-child(1){
+      width:18%;
+      font-weight:700;
+      padding-right:.12in;
+      white-space:nowrap;
+    }
+
+    .teaching td:nth-child(2){
+      width:52%;
+    }
+
+    .teaching td:nth-child(3){
+      width:30%;
+      padding-left:.08in;
+    }
+
+    .publication-list,
+    .abstract-list,
+    .skills-list{
+      margin:0;
+      padding-left:1.1em;
+    }
+
+    .publication-list li,
+    .abstract-list li,
+    .skills-list li{
+      margin:0 0 .08in;
+      font-size:10pt;
+      line-height:1.18;
+    }
+
+    .skills-list{
+      list-style:none;
+      padding-left:0;
+    }
+
+    .skills-list li strong{
+      display:inline-block;
+      min-width:1.65in;
+    }
+
+    .talk-block{
+      margin:0 0 .10in;
+    }
+
+    .talk-title{
+      font-size:10pt;
+      line-height:1.15;
+      margin:0 0 .02in;
+      font-weight:700;
+    }
+
+    .media-table td:nth-child(1),
+    .awards-table td:nth-child(1),
+    .memberships-table td:nth-child(1){
+      width:16%;
+      white-space:nowrap;
+    }
+
+    .media-table td:nth-child(2){
+      width:62%;
+      padding-right:.08in;
+    }
+
+    .media-table td:nth-child(3){
+      width:22%;
+      text-align:left;
+      white-space:nowrap;
+    }
+
+    .footer-note{
+      margin-top:.18in;
+      padding-top:.04in;
+      border-top:1px solid rgba(0,0,0,.12);
+      font-size:9pt;
+      color:#444;
+      text-align:center;
+    }
+
+    @media (max-width: 820px){
+      .page{
+        width:min(8.5in, calc(100vw - 1rem));
+        padding:.55in .5in .45in;
+        margin:.5rem auto 1rem;
+      }
+      .screen-nav{
+        justify-content:flex-start;
+        overflow:auto;
+        white-space:nowrap;
+      }
+      .cv-header .name{font-size:18pt;}
+      .section-title{font-size:13pt;}
+      table.cv-table col.date,
+      table.cv-table col.main,
+      table.cv-table col.place{
+        width:auto;
+      }
+      table.cv-table,
+      table.cv-table tbody,
+      table.cv-table tr,
+      table.cv-table td{
+        display:block;
+      }
+      table.cv-table tr{
+        margin-bottom:.09in;
+      }
+      table.cv-table td{
+        width:100% !important;
+        text-align:left !important;
+        padding:0;
+        white-space:normal !important;
+      }
+      table.cv-table td.date{
+        font-weight:700;
+        padding-bottom:.01in;
+      }
+      .desc-row td{
+        padding-top:.01in;
+        padding-bottom:.08in;
+      }
+      .teaching td:nth-child(1),
+      .teaching td:nth-child(2),
+      .teaching td:nth-child(3),
+      .media-table td:nth-child(1),
+      .media-table td:nth-child(2),
+      .media-table td:nth-child(3),
+      .awards-table td:nth-child(1),
+      .awards-table td:nth-child(2),
+      .awards-table td:nth-child(3),
+      .memberships-table td:nth-child(1),
+      .memberships-table td:nth-child(2){
+        width:100%;
+        padding-left:0;
+      }
+      .skills-list li strong{
+        min-width:0;
+      }
+    }
+
+    @media print{
+      body{
+        background:#fff;
+      }
+      .screen-nav{
+        display:none;
+      }
+      .page{
+        width:auto;
+        margin:0;
+        padding:1in 1in .5in;
+        box-shadow:none;
+      }
+      a{
+        color:var(--link);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="screen-nav" aria-label="CV sections">
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#publications">Publications</a>
+    <a href="#talks">Talks</a>
+    <a href="#outreach">Outreach</a>
+    <a href="#media">Media</a>
+    <a href="#service">Service</a>
+    <a href="#awards">Awards</a>
+    <a href="#skills">Skills</a>
+  </nav>
+
+  <main class="page">
+    <header class="cv-header">
+      <h1 class="name">India Jackson</h1>
+      <div class="title">NSF AGS Postdoctoral Fellow</div>
+      <p class="contact">
+        <a href="mailto:ijackson1@gsu.edu">ijackson1@gsu.edu</a>
+        || 
+        <a href="https://orcid.org/0009-0001-5404-8689" target="_blank" rel="noopener">Orcid ID: 0009-0001-5404-8689</a>
+        || 
+        <a href="https://github.com/indiajacksonphd" target="_blank" rel="noopener">GitHub</a>
+        || 
+        <a href="https://linkedin.com/in/india-jackson-phd-641a9354" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </header>
+
+    <section class="section" id="education">
+      <h2 class="section-title">Education</h2>
+      <table class="cv-table">
+        <colgroup><col class="date"><col class="main"><col class="place"></colgroup>
+        <tr><td class="date">May 2024</td><td>Ph.D. Astrophysics</td><td>Georgia State University</td></tr>
+        <tr><td class="date">May 2024</td><td>M.S. Computer Science</td><td>Georgia State University</td></tr>
+        <tr><td class="date">Aug 2023</td><td>M.S. Physics</td><td>Georgia State University</td></tr>
+        <tr><td class="date">May 2013</td><td>M.S. Mathematics</td><td>Georgia State University</td></tr>
+        <tr><td class="date">Dec 2010</td><td>B.S. Mathematics</td><td>Georgia State University</td></tr>
+      </table>
+    </section>
+
+    <section class="section" id="research-interests">
+      <h2 class="section-title">Research Interests</h2>
+      <p class="interest">
+        My research integrates heliophysics, artificial intelligence, scientific cyberinfrastructure, and space science policy to
+        advance both the understanding and accessibility of space weather. I study solar eruptive events, solar energetic
+        particle (SEP) propagation, and radiation impacts on human spaceflight and technological systems. I develop
+        machine learning methods, including computer vision and time series analysis, alongside cloud-based data pipelines
+        to enable scalable, interoperable analysis of heterogeneous datasets (e.g., FITS, CDF, NetCDF). My work is driven
+        by a broader goal of improving scientific accessibility through data standardization, infrastructure, and policy.
+      </p>
+    </section>
+
+    <section class="section" id="funding">
+      <h2 class="section-title">Funding</h2>
+      <p class="funding-line">National Science Foundation Atmospheric and Geospace Sciences Postdoctoral Fellowship - $202,000 (<em>active</em>)</p>
+      <p class="funding-line">International Astronomical Union, <em>The Women and Girls in Astronomy</em> - $2,000 (<em>completed</em>)</p>
+      <p class="funding-line"><strong>TOTAL: $204,000</strong></p>
+    </section>
+
+    <section class="section" id="experience">
+      <h2 class="section-title">Experience</h2>
+
+      <h3 class="subsection-title">Research</h3>
+      <table class="cv-table">
+        <colgroup><col class="date"><col class="main"><col class="place"></colgroup>
+        <tr class="entry-head"><td class="date">Jan 2025</td><td>NSF Atmospheric and Geospace Sciences Postdoc Fellow</td><td>Georgia State University (Host)</td></tr>
+        <tr class="desc-row"><td colspan="3">Lead independent research on AI/ML-driven space weather forecasting, including software development, conference engagement, and publication.</td></tr>
+
+        <tr class="entry-head"><td class="date">June 2024</td><td>Summer Postdoctoral Fellow</td><td>Frontier Development Lab</td></tr>
+        <tr class="desc-row"><td colspan="3">Developed physics-informed machine learning models in collaboration with academic and industry partners to improve space weather forecasting during the FDL-X HelioLab research sprint.</td></tr>
+
+        <tr class="entry-head"><td class="date">Feb 2024</td><td>NASA Heliophysics Mission Design School</td><td>Jet Propulsion Lab</td></tr>
+        <tr class="desc-row"><td colspan="3">Designed a concept heliophysics mission using hypothesis-driven frameworks, incorporating instrument selection, cost trade-offs, and concurrent engineering principles.</td></tr>
+
+        <tr class="entry-head"><td class="date">June 2023</td><td>NASA HelioAnalytics Intern</td><td>Goddard Space Flight Center</td></tr>
+        <tr class="desc-row"><td colspan="3">Applied machine learning to heliophysics by annotating coronal mass ejections with Computer Vision Annotation Tool (CVAT) and converting datasets from COCO to YOLO format, improving YOLOv7 performance through parameter evaluation.</td></tr>
+
+        <tr class="entry-head"><td class="date">June 2019</td><td>NASA Statistics Intern</td><td>Johnson Space Center</td></tr>
+        <tr class="desc-row"><td colspan="3">Built a comprehensive SEP database and developed statistical models linking solar flares, CMEs, and SEPs across Solar Cycle 24 to support ISEP validation.</td></tr>
+
+        <tr class="entry-head"><td class="date">Aug 2017</td><td>Graduate Research and Teaching Assistant</td><td>Georgia State University</td></tr>
+        <tr class="desc-row"><td colspan="3">Applied survival analysis and machine learning to predict solar energetic particle detection times. Contributed to development of a cloud-based AWS research environment for large-scale heliophysics data.</td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+      </table>
+
+      <h3 class="subsection-title">Policy</h3>
+      <table class="cv-table tight">
+        <colgroup><col class="date"><col class="main"><col class="place"></colgroup>
+        <tr class="entry-head"><td class="date">June 2025</td><td>HelioCoalition Congressional Visits</td><td>Washington, DC</td></tr>
+        <tr class="desc-row"><td colspan="3">Engaged with legislators to advocate for sustained investment in heliophysics, space weather forecasting, and solar physics missions and infrastructure.</td></tr>
+        <tr class="entry-head"><td class="date">April 2025</td><td>AAS Congressional Visits Day</td><td>Washington, DC</td></tr>
+        <tr class="desc-row"><td colspan="3">Met with members of Congress to advocate for increased federal funding in physics and astronomy research and to discuss priorities outlined in the Decadal Survey.</td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+      </table>
+
+      <h3 class="subsection-title">Training &amp; Professional Development</h3>
+      <table class="cv-table tight">
+        <colgroup><col class="date"><col class="main"><col class="place"></colgroup>
+        <tr class="entry-head"><td class="date">July 2026</td><td>INTERSECT Software Engineering Bootcamp (upcoming)</td><td>Princeton</td></tr>
+        <tr class="desc-row"><td colspan="3">Selected as a Summer Scholar for training in reproducible and sustainable scientific software development.</td></tr>
+        <tr class="entry-head"><td class="date">Nov 2024</td><td>Culturally Inclusive Planetary Engagement Workshop</td><td>Agnes Scott College</td></tr>
+        <tr class="desc-row"><td colspan="3">Participated in a Planetary ReaCH workshop on culturally inclusive public engagement in planetary science.</td></tr>
+        <tr class="entry-head"><td class="date">Oct 2024</td><td>HelioLab Research Horizons Workshop</td><td>Google (PartnerPlex)</td></tr>
+        <tr class="desc-row"><td colspan="3">Selected for a workshop on AI applications in heliophysics hosted by NASA, FDL-X, and Google Cloud.</td></tr>
+        <tr class="entry-head"><td class="date">June 2018</td><td>Living With a Star &amp; Boulder Space Weather Program</td><td>UCAR, NCAR, HAO</td></tr>
+        <tr class="desc-row"><td colspan="3">Completed a summer program on heliophysics, including solar wind, magnetic fields, and space weather processes.</td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+      </table>
+
+      <h3 class="subsection-title">Teaching</h3>
+      <table class="cv-table teaching tight">
+        <tr><td>Mathematics</td><td>College Algebra, Trigonometry, Statistics, Calculus I - III</td><td>GSU; Clark Atlanta Uni</td></tr>
+        <tr><td>Physics</td><td>1111 (lecture/lab), 1112 (lecture/lab), 2211 (lab), 2212 (lab)</td><td>GSU</td></tr>
+        <tr><td>Astronomy</td><td>1111 (lab), 1112 (lab)</td><td>GSU</td></tr>
+        <tr><td>Comp Sci</td><td>Supervised Machine Learning Instructor (upcoming)</td><td>NRAO; CosmicAI</td></tr>
+      </table>
+    </section>
+
+    <section class="section" id="publications">
+      <h2 class="section-title">Publications</h2>
+
+      <h3 class="subsection-title">Peer-Reviewed</h3>
+      <ul class="publication-list">
+        <li>Jackson, I., Aydin, B., &amp; Martens, P. (2026). <em>Helio-Lite: An Open Cloud Framework for Advancing Heliophysics Research.</em>Journal of Open Research Software, 14(1), 3. <a href="https://doi.org/10.5334/jors.519" target="_blank" rel="noopener">https://doi.org/10.5334/jors.519</a></li>
+        <li>Chibueze, J. O., Farid, S., Jackson, I., et al. (2025). <em>Black in stellar astrophysics.</em>Nature Astronomy, 9, 760-766. <a href="https://doi.org/10.1038/s41550-025-02578-8" target="_blank" rel="noopener">https://doi.org/10.1038/s41550-025-02578-8</a></li>
+        <li>Jackson, I., &amp; Martens, P. (2024). <em>Advancing solar energetic particle event prediction through survival analysis and cloud computing. I. Kaplan-Meier estimation and Cox proportional hazards modeling.</em> The Astrophysical Journal Supplement Series, 272(2), 37. <a href="https://doi.org/10.3847/1538-4365/ad3fba" target="_blank" rel="noopener">https://doi.org/10.3847/1538-4365/ad3fba</a></li>
+      </ul>
+
+      <h3 class="subsection-title">Software, Data &amp; Cyberinfrastructure</h3>
+      <ul class="publication-list">
+        <li>Jackson, I. (2025). FitsFlow: A Browser-Based Heliophysics Tool for FITS Exploration (v0.1.0). Apache 2.0 License. <a href="https://doi.org/10.5281/zenodo.17069414" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.17069414</a></li>
+        <li>Jackson, I., Martens, P., &amp; Berkay, A. (2025). Helio-Lite (v0.1.0). MIT License. <a href="https://doi.org/10.5281/zenodo.17611741" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.17611741</a></li>
+        <li>Jackson, I., &amp; Martens, P. (2024). Survival Solar Energetic Particle (SSEP) Dataset. Harvard Dataverse. <a href="https://doi.org/10.7910/DVN/GXY9MZ" target="_blank" rel="noopener">https://doi.org/10.7910/DVN/GXY9MZ</a></li>
+      </ul>
+
+      <h3 class="subsection-title">Intellectual Property</h3>
+      <ul class="publication-list">
+        <li>Event-Driven Methods for Distributed Semantic Chunking and Manifest-Defined Processing of Digital Data Objects. <em>Patent Pending - Filed January 2026</em></li>
+      </ul>
+
+      <h3 class="subsection-title">Public-Facing</h3>
+      <ul class="publication-list">
+        <li>Jackson, I. (2025). <em>Our Solar System: A Coloring Journey from the Sun to Neptune.</em> Amazon KDP. <a href="https://a.co/d/098UZyHc" target="_blank" rel="noopener">https://a.co/d/098UZyHc</a></li>
+      </ul>
+    </section>
+
+    <section class="section" id="talks">
+      <h2 class="section-title">Invited Talks</h2>
+
+      <div class="talk-block">
+        <p class="talk-title">"From Space Weather Scientist to Space Weather Advocate: Follow the Source of Your Funding"</p>
+        <table class="cv-table tight"><tr><td class="date">Feb 2026</td><td>ComSciCon-ATL</td><td>Georgia Institute of Technology</td></tr></table>
+      </div>
+
+      <div class="talk-block">
+        <p class="talk-title">"The Active Sun: How Solar Physics Connects to Life and Technology on Earth"</p>
+        <table class="cv-table tight">
+          <tr><td class="date">Oct 2025</td><td>Department of Physics</td><td>Oglethorpe University</td></tr>
+          <tr><td class="date">Oct 2025</td><td>Department of Mathematics</td><td>Clark Atlanta University</td></tr>
+        </table>
+      </div>
+
+      <div class="talk-block">
+        <p class="talk-title">"Developing a Real-Time Solar Event Detection Framework Using CV/ML and Cloud Integration"</p>
+        <table class="cv-table tight">
+          <tr><td class="date">May 2025</td><td>Institute for Space Weather Sciences</td><td>New Jersey Institute of Technology</td></tr>
+          <tr><td class="date">April 2025</td><td>NASA Heliophysics Division</td><td>Goddard Space Flight Center</td></tr>
+        </table>
+      </div>
+
+      <div class="talk-block">
+        <p class="talk-title">"Geo-Cloak: Operational Machine Learning Tool for Global Geomagnetic Field Perturbation Forecasting"</p>
+        <table class="cv-table tight">
+          <tr><td class="date">Sept 2024</td><td>Department of Physics &amp; Astronomy</td><td>Agnes Scott College</td></tr>
+          <tr><td class="date">Sept 2024</td><td>Black in Astro Speaker Series</td><td>BlackInAstro</td></tr>
+          <tr><td class="date">Sept 2024</td><td>Department of Mathematics</td><td>Clark Atlanta University</td></tr>
+        </table>
+      </div>
+
+      <div class="talk-block">
+        <p class="talk-title">"Unlocking the Mysteries of Space Weather with Computer Vision, Geometry, and ML"</p>
+        <table class="cv-table tight">
+          <tr><td class="date">Feb 2026</td><td>AstroAI and Solar Stellar Group</td><td>Harvard-Smithsonian Center for Astrophysics</td></tr>
+        </table>
+      </div>
+
+      <div class="talk-block">
+        <p class="talk-title">"Bridging the Gap: Advancing SEP Forecasting through Survival Analysis and ML in the Cloud"</p>
+        <table class="cv-table tight">
+          <tr><td class="date">Oct 2023</td><td>CfA Seminar</td><td>Harvard-Smithsonian Center for Astrophysics</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="abstracts">
+      <h2 class="section-title">Conference Proceedings &amp; Abstracts</h2>
+      <ul class="abstract-list">
+        <li>Jackson, I. (2025). <em>FitsFlow: A Cyberinfrastructure, Browser-Based, Cloud-Native Platform for Machine Learning-Ready Processing of Solar FITS Data.</em> Data, Analysis, and Software in Heliophysics (DASH). <a href="https://doi.org/10.5281/zenodo.17382533" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.17382533</a></li>
+        <li>Jackson, I. (2025). <em>FitsFlow: A Browser-Based Heliophysics Tool for FITS Exploration.</em> Science and Cyberinfrastructure for Discovery. <a href="https://doi.org/10.5281/zenodo.17069414" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.17069414</a></li>
+        <li>Jha, B. K., Pandey, C., Issan, O., Jackson, I., Heyns, M., Mukundan, R., Upendran, V., Ferdousi, B., Tigas, P., Saleem, H., &amp; Lavin, A. (2024). <em>Geo-Cloak: Operational machine learning tool for global geomagnetic field perturbation forecasting.</em> 2024 American Geophysical Union (AGU). <a href="https://ui.adsabs.harvard.edu/abs/2024AGUFMSM11C..06J" target="_blank" rel="noopener">https://ui.adsabs.harvard.edu/abs/2024AGUFMSM11C..06J</a></li>
+        <li>Nina Abramzon, Mary K. Chessey, Ximena Cid, Beth Cunningham, Jessica Esquivel, Hume A. Feldman, Alina Gearba-Sell, India Jackson, Yasemin Kalender, Caitlin Kepple, Anne F. Kornahrens, Sandra Liss, Stephanie Lyons, Arlene Maclin, Laura McCullough, Dana Molloy, Artemis Spyrou, Sarah Sublett, Stephanie M. Williams, Sherry Yennello. (2023). <em>Celebrating the successes of women physicists over the past 50 years in the United States.</em> <em>AIP Conference Proceedings, 3040</em>(1), 050042. <a href="https://doi.org/10.1063/5.0175795" target="_blank" rel="noopener">https://doi.org/10.1063/5.0175795</a></li>
+        <li>Thomas, B. A., Alzate, N., Kirk, M. S., &amp; Jackson, I. (2023). <em>Advancing heliophysics data analysis through machine learning: Utilizing YOLOv7 for automated cataloging of SOHO/LASCO C2 images</em> (Art. no. NG13B-0614). 2023 American Geophysical Union (AGU). <a href="https://ui.adsabs.harvard.edu/abs/2023AGUFMNG13B0614T/abstract" target="_blank" rel="noopener">https://ui.adsabs.harvard.edu/abs/2023AGUFMNG13B0614T/abstract</a></li>
+        <li>Jackson, I., &amp; Whitman, K. (2019). <em>Building a database of SEP events informed by statistical relationships between flares, CMEs, and SEPs.</em> Solar Heliospheric and INterplanetary Environment (SHINE). <a href="https://ui.adsabs.harvard.edu/abs/2019shin.confE.237J/abstract" target="_blank" rel="noopener">https://ui.adsabs.harvard.edu/abs/2019shin.confE.237J/abstract</a></li>
+      </ul>
+    </section>
+
+    <section class="section" id="outreach">
+      <h2 class="section-title">Public Outreach</h2>
+
+      <h3 class="subsection-title">Professional Guest</h3>
+      <table class="cv-table tight">
+        <tr><td class="date">Feb 2026</td><td>Clayton County Stem Expo</td><td>Forest Park, GA</td></tr>
+        <tr><td class="date">Sept 2025</td><td>Dragon Con Science Track</td><td>Atlanta, GA</td></tr>
+      </table>
+
+      <h3 class="subsection-title">Astronomy Day</h3>
+      <table class="cv-table tight">
+        <tr><td class="date">Nov 2025</td><td>Oakview Elementary School</td><td>Decatur, GA</td></tr>
+        <tr><td class="date">Oct 2025</td><td>Fountain Elementary School</td><td>Forest Park, GA</td></tr>
+        <tr><td class="date">Oct 2019</td><td>Public Observing Night</td><td>HLCO; Rutledge, GA</td></tr>
+      </table>
+
+      <h3 class="subsection-title">Career Day Speaker</h3>
+      <table class="cv-table tight">
+        <tr><td class="date">March 2026</td><td>Fountain Elementary School</td><td>Forest Park, GA</td></tr>
+        <tr><td class="date">April 2025</td><td>Martin Luther King Jr. High School</td><td>Stonecrest, GA</td></tr>
+      </table>
+    </section>
+
+    <section class="section" id="media">
+      <h2 class="section-title">Selected Media</h2>
+
+      <h3 class="subsection-title">Expert Commentary &amp; Interviews</h3>
+      <table class="cv-table media-table tight">
+        <tr><td>April 2025</td><td>Ologies Podcast, <em>Discussed heliophysics for broad audience</em></td><td><a href="https://www.alieward.com/smologies/thesunweather-76gwx?rq=India%20Jackson" target="_blank" rel="noopener">Listen</a></td></tr>
+        <tr><td>Feb 2025</td><td>National Public Radio, <em>Interview on impacts of federal funding freeze</em></td><td><a href="https://www.npr.org/2025/02/01/nx-s1-5282182/how-a-funding-freeze-ordered-by-trump-is-impacting-2-early-career-scientists" target="_blank" rel="noopener">Listen</a></td></tr>
+        <tr><td>May 2024</td><td>National Public Radio, <em>Provided expert analysis on solar activity</em></td><td><a href="https://www.npr.org/2024/05/11/1250756722/a-powerful-solar-storm-is-bringing-northern-lights-to-unusual-places" target="_blank" rel="noopener">Listen</a></td></tr>
+        <tr><td>Dec 2023</td><td>National Public Radio, <em>Provided expert analysis on solar activity</em></td><td><a href="https://www.npr.org/2023/12/17/1219882748/a-powerful-eruption-on-the-sun-disrupted-radio-signals-on-earth" target="_blank" rel="noopener">Listen</a></td></tr>
+      </table>
+
+      <h3 class="subsection-title">Features &amp; Profiles</h3>
+      <table class="cv-table media-table tight">
+        <tr><td>May 2024</td><td>Atlanta Journal-Constitution, <em>Article detailing my trip to NASA JPL</em></td><td><a href="https://indiajacksonphd.s3.us-east-1.amazonaws.com/The_Atlanta_Constitution_2024_05_26_B4.pdf" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td>Sept 2019</td><td>Georgia Public Broadcasting, <em>Interview detailing crowd funding for NASA Internship</em></td><td><a href="https://www.gpb.org/news/2019/09/23/gsu-student-single-mom-reflects-on-life-changing-experience-at-nasa-internship" target="_blank" rel="noopener">Listen</a></td></tr>
+        <tr><td>Aug 2019</td><td>GSU Magazine, <em>Cover Feature - Spread detailing my academic journey</em></td><td><a href="https://news.gsu.edu/magazine/fall2019/stars-align" target="_blank" rel="noopener">View</a></td></tr>
+      </table>
+    </section>
+
+    <section class="section" id="service">
+      <h2 class="section-title">Scientific Service</h2>
+      <p><strong>Panel Reviewer</strong>, <em>NASA Science Mission Directorate, Research Opportunities in Space and Earth Sciences (ROSES)</em></p>
+      <p>Serves as a confidential peer reviewer for NASA proposals in the space and Earth sciences.</p>
+      <p style="margin-top:.08in;"><strong>Code Reviewer</strong>, <em>AGU JGR Machine Learning and Computation</em></p>
+      <p>Evaluate submitted research software to ensure open access, documentation quality, and reproducibility of results in accordance with AGU's data and software policy.</p>
+    </section>
+
+    <section class="section" id="awards">
+      <h2 class="section-title">Awards &amp; Honors</h2>
+      <table class="cv-table awards-table tight">
+        <tr><td>2025</td><td>40 Under 40</td><td>Georgia Trends</td></tr>
+        <tr><td>2024</td><td>40 Under 40</td><td>GSU</td></tr>
+        <tr><td>2020</td><td>Presidential Scholar</td><td>African American Women in Physics</td></tr>
+        <tr><td>2004</td><td>Presidential Scholar</td><td>Boys and Girls Club of Metro Atlanta</td></tr>
+      </table>
+    </section>
+
+    <section class="section" id="memberships">
+      <h2 class="section-title">Professional Memberships</h2>
+      <table class="cv-table memberships-table tight">
+        <tr><td>2017</td><td>American Astronomical Society</td></tr>
+        <tr><td>2017</td><td>American Geophysical Union</td></tr>
+        <tr><td>2017</td><td>African American Women in Physics</td></tr>
+        <tr><td>2017</td><td>National Society of Black Physicists</td></tr>
+      </table>
+    </section>
+
+    <section class="section" id="skills">
+      <h2 class="section-title">Computational Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Languages:</strong> Python, JavaScript, Java, C#</li>
+        <li><strong>ML &amp; Data Science:</strong> scikit-learn, TensorFlow, PyTorch, computer vision</li>
+        <li><strong>Cloud &amp; Infrastructure:</strong> AWS, GCP, serverless architectures</li>
+        <li><strong>Scientific Data Systems:</strong> FITS, HDF5, NetCDF, ASDF; SunPy, JSOC, Helioviewer</li>
+        <li><strong>Web Development:</strong> HTML, CSS, Vue.js</li>
+        <li><strong>Tools:</strong> Node.js, Unity, LaTeX, MATLAB</li>
+      </ul>
+    </section>
+
+    <div class="footer-note">Responsive HTML recreation of the CV layout for web display and printing.</div>
+  </main>
+</body>
+</html>

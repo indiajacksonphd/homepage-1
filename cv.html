@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Jackson CV</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #0b0f1a, #05070d);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 12px;
+    }
+
+    /* Image styling */
+    .cv-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 6px 25px rgba(0, 188, 212, 0.15);
+    }
+
+    /* Wrapper for first image */
+    .image-wrapper {
+      position: relative;
+    }
+
+    /* Download button */
+    .download-btn {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #00bcd4;
+      color: #000;
+      padding: 6px 14px;
+      font-size: 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+      transition: all 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background: #00e5ff;
+      box-shadow: 0 0 14px rgba(0, 229, 255, 0.9);
+      transform: translateY(-1px);
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .container {
+        padding: 12px 8px;
+      }
+
+      .download-btn {
+        top: 10px;
+        left: 10px;
+        font-size: 11px;
+        padding: 5px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- First page with download button -->
+    <div class="image-wrapper">
+      <a href="https://indiajacksonphd.s3.us-east-1.amazonaws.com/Jackson_India_CV_2026_8.pdf" download class="download-btn"  target="_blank">
+        Download PDF
+      </a>
+      <img src="Jackson_India_CV_2026_8_no_links_Page_1.png" class="cv-image">
+    </div>
+
+    <!-- Remaining pages -->
+    <img src="Jackson_India_CV_2026_8_no_links_Page_2.png" class="cv-image">
+    <img src="Jackson_India_CV_2026_8_no_links_Page_3.png" class="cv-image">
+    <img src="Jackson_India_CV_2026_8_no_links_Page_4.png" class="cv-image">
+    <img src="Jackson_India_CV_2026_8_no_links_Page_5.png" class="cv-image">
+
+  </div>
+
+</body>
+</html>
